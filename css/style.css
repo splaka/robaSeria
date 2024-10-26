@@ -1,0 +1,74 @@
+.altroWrap {
+    font-size: clamp(0.2em, 0.8em, 1em); /* Dimensione del testo di base */
+}
+
+.altroWrap p{
+    font-size: clamp(15px, 1.5em, 3em); /* Dimensione del testo di base */
+}
+
+.altroWrap h2{
+    font-size: clamp(25px, 1.5em, 3em); /* Dimensione del testo di base */
+}
+
+html {
+    color: white;
+}
+
+.tiny5-regular {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.indexHeader {
+    text-align: center;
+    font-size: clamp(1em, 2vw, 1.75em); /* Dimensione del titolo */
+}
+
+.mainContenuto {
+    margin: 5%;
+}
+
+.mainContenuto1 {
+    margin: 5%;
+}
+
+.mainContenuto p, .mainContenuto1 p{
+    margin-top: 0;
+}
+
+.mainContenuto1 h2{
+    margin-top: 0;
+    text-align: right;
+}
+
+.mainContenuto1 .contentWrapper {
+    text-align: justify;
+    display: flex; /* Dispone l'immagine e il testo affiancati */
+    flex-direction: row-reverse;
+}
+
+.contentWrapper {
+    text-align: justify;
+    display: flex; /* Dispone l'immagine e il testo affiancati */
+}
+
+.mainContenuto1 img {
+    height: clamp(10px, 30vh, 500px); /* Imposta l'altezza dell'immagine con clamp */
+    border-style: double;
+    border-color: white;
+}
+
+.mainContenuto img {
+    height: clamp(10px, 30vh, 500px); /* Imposta l'altezza dell'immagine con clamp */
+    border-style: double;
+    border-color: white;
+}
+
+.mainContenuto .imgWrap {
+    padding-right: clamp(10px, 1%, 20px); /* Padding responsive */
+}
+
+.mainContenuto1 .imgWrap {
+    padding-left: clamp(10px, 1%, 20px); /* Padding responsive */
+}
