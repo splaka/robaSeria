@@ -1,13 +1,17 @@
 .altroWrap {
-    font-size: clamp(0.2em, 0.8em, 1em); /* Dimensione del testo di base */
+    font-size: clamp(0.2em, 0.8em, 1em);
+    margin-inline: clamp(0px, 20%);
+    /* Dimensione del testo di base */
 }
 
-.altroWrap p{
-    font-size: clamp(15px, 1.5em, 3em); /* Dimensione del testo di base */
+.altroWrap p {
+    font-size: clamp(1.3em, 1.5vw, 2em);
+    /* Dimensione del testo di base */
 }
 
-.altroWrap h2{
-    font-size: clamp(25px, 1.5em, 3em); /* Dimensione del testo di base */
+.altroWrap h2 {
+    font-size: clamp(1.5em, 2.5vw, 2em);
+    /* Dimensione del testo di base */
 }
 
 html {
@@ -22,7 +26,9 @@ html {
 
 .indexHeader {
     text-align: center;
-    font-size: clamp(1em, 2vw, 1.75em); /* Dimensione del titolo */
+    font-size: clamp(1.2em, 3.5vw, 2em);
+    animation: rainbow 1.5s infinite;
+    /* Dimensione del titolo */
 }
 
 .mainContenuto {
@@ -33,42 +39,70 @@ html {
     margin: 5%;
 }
 
-.mainContenuto p, .mainContenuto1 p{
+.mainContenuto p,
+.mainContenuto1 p {
     margin-top: 0;
 }
 
-.mainContenuto1 h2{
+.mainContenuto1 h2 {
     margin-top: 0;
     text-align: right;
 }
 
 .mainContenuto1 .contentWrapper {
     text-align: justify;
-    display: flex; /* Dispone l'immagine e il testo affiancati */
+    display: flex;
+    /* Dispone l'immagine e il testo affiancati */
     flex-direction: row-reverse;
 }
 
 .contentWrapper {
     text-align: justify;
-    display: flex; /* Dispone l'immagine e il testo affiancati */
+    display: flex;
+    /* Dispone l'immagine e il testo affiancati */
 }
 
 .mainContenuto1 img {
-    height: clamp(10px, 30vh, 500px); /* Imposta l'altezza dell'immagine con clamp */
+    height: clamp(10px, 30vh, 500px);
+    /* Imposta l'altezza dell'immagine con clamp */
     border-style: double;
     border-color: white;
 }
 
 .mainContenuto img {
-    height: clamp(10px, 30vh, 500px); /* Imposta l'altezza dell'immagine con clamp */
+    height: clamp(10px, 30vh, 500px);
+    /* Imposta l'altezza dell'immagine con clamp */
     border-style: double;
     border-color: white;
 }
 
 .mainContenuto .imgWrap {
-    padding-right: clamp(10px, 1%, 20px); /* Padding responsive */
+    padding-right: clamp(10px, 1%, 20px);
+    /* Padding responsive */
 }
 
 .mainContenuto1 .imgWrap {
-    padding-left: clamp(10px, 1%, 20px); /* Padding responsive */
+    padding-left: clamp(10px, 1%, 20px);
+    /* Padding responsive */
+}
+
+
+
+@keyframes rainbow {
+    0% {
+        color: white;
+    }
+
+    25% {
+        color: #1800ff;
+    }
+
+    50% {
+        color: #ffef00;
+    }
+
+    100% {
+        color: white;
+    }
+
 }
