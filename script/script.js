@@ -1,35 +1,29 @@
-// Detect touch support
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+// Select elements
+const menu = document.getElementById('offcanvas-menu');
+const toggleButton = document.getElementById('menu-toggle');
+const closeButton = document.querySelector('.close-btn');
 
 // Open menu and hide the toggle button
-const openMenu = () => {
+toggleButton.addEventListener('click', () => {
     menu.classList.add('show');
-    toggleButton.style.display = 'none';
-};
+    toggleButton.style.display = 'none'; // Immediately hide the button
+});
 
 // Close menu and show the toggle button after a delay
-const closeMenu = () => {
+closeButton.addEventListener('click', () => {
     menu.classList.remove('show');
     setTimeout(() => {
-        toggleButton.style.display = 'block';
-    }, 300); // Adjust delay as needed
-};
+        toggleButton.style.display = 'block'; // Show the button after 300ms
+    }, 300); // 300 milliseconds delay
+});
 
-// Add event listeners
-if (isTouchDevice) {
-    toggleButton.addEventListener('touchstart', openMenu);
-    closeButton.addEventListener('touchstart', closeMenu);
-    document.addEventListener('touchstart', (e) => {
-        if (!menu.contains(e.target) && !toggleButton.contains(e.target)) {
-            closeMenu();
-        }
-    });
-} else {
-    toggleButton.addEventListener('click', openMenu);
-    closeButton.addEventListener('click', closeMenu);
-    document.addEventListener('click', (e) => {
-        if (!menu.contains(e.target) && !toggleButton.contains(e.target)) {
-            closeMenu();
-        }
-    });
-}
+// Close the menu when clicking outside of it and show the toggle button after a delay
+document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !toggleButton.contains(e.target)) {
+        menu.classList.remove('show');
+        setTimeout(() => {
+            toggleButton.style.display = 'block'; // Show the button after 300ms
+        }, 300); // 300 milliseconds delay
+    }
+});
+
