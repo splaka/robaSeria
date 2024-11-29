@@ -20,12 +20,13 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQ3STLN871"></script>
 </head>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-GQ3STLN871');
+    gtag('config', 'G-GQ3STLN871');
 </script>
+
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
@@ -33,6 +34,18 @@
     <header class="indexHeader">
         <h1>Sei Di Brescello Se</h1>
     </header>
+    <div id="offcanvas-menu" class="offcanvas">
+        <button class="close-btn">&times;</button>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <button id="menu-toggle" class="menu-btn">☰</button>
     <div class="altroWrap">
         <div class="mainContenuto">
             <h2>1) Sei fatto così:</h1>
@@ -61,10 +74,11 @@
                     </p>
                 </div>
         </div>
-
+        <script src="script/script.js"></script>
     </div>
     </div>
     <script src="" async defer></script>
+    <footer>Made by JimmyDev</footer>
 </body>
 
 </html>
