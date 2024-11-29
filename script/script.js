@@ -6,24 +6,19 @@ const closeButton = document.querySelector('.close-btn');
 // Open menu and hide the toggle button
 toggleButton.addEventListener('click', () => {
     menu.classList.add('show');
-    toggleButton.style.display = 'none'; // Immediately hide the button
+    toggleButton.style.display = 'none'; // Hide the button
 });
 
-// Close menu and show the toggle button after a delay
+// Close menu and show the toggle button
 closeButton.addEventListener('click', () => {
     menu.classList.remove('show');
-    setTimeout(() => {
-        toggleButton.style.display = 'block'; // Show the button after 300ms
-    }, 300); // 300 milliseconds delay
+    toggleButton.style.display = 'block'; // Show the button
 });
 
-// Close the menu when clicking outside of it and show the toggle button after a delay
+// Close the menu when clicking outside of it and show the toggle button
 document.addEventListener('click', (e) => {
     if (!menu.contains(e.target) && !toggleButton.contains(e.target)) {
         menu.classList.remove('show');
-        setTimeout(() => {
-            toggleButton.style.display = 'block'; // Show the button after 300ms
-        }, 300); // 300 milliseconds delay
+        toggleButton.style.display = 'block'; // Show the button
     }
 });
-
