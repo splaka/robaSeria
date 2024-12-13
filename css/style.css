@@ -1,6 +1,7 @@
 .altroWrap {
     font-size: clamp(0.2em, 0.8em, 1em);
     margin-inline: clamp(0px, 20%);
+    flex: 1;
     /* Dimensione del testo di base */
 }
 
@@ -16,6 +17,13 @@
 
 html {
     color: white;
+}
+
+body,
+html {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .tiny5-regular {
@@ -103,7 +111,6 @@ html {
 .offcanvas ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .offcanvas li {
@@ -157,6 +164,9 @@ html {
 
 /* Stile del pulsante accordion */
 .accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: black;
     color: white;
     cursor: pointer;
@@ -173,6 +183,7 @@ html {
 .active,
 .accordion:hover {
     background-color: #333;
+    color: white;
 }
 
 /* Stile del pannello nascosto e visibile */
@@ -180,25 +191,34 @@ html {
     padding: 0 18px;
     background-color: black;
     max-height: 0;
-    /* Altezza iniziale chiusa */
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    /* Transizione fluida */
 }
 
+/* Simbolo "+" quando l'accordion è chiuso */
 .accordion:after {
     content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
+    /* Unicode del simbolo "+" */
+    font-size: 20px;
+    /* Puoi aumentare la dimensione per renderlo più visibile */
+    color: white;
+    /* Colore del simbolo */
     float: right;
-    margin-left: 5px;
+    /* Posiziona il simbolo a destra */
+    margin-left: 10px;
+    /* Spazio tra il simbolo e il testo */
 }
 
-.active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
+/* Simbolo "-" quando l'accordion è attivo */
+.accordion.active:after {
+    content: '\2796';
+    /* Unicode del simbolo "-" */
+    font-size: 20px;
+    /* Puoi mantenere la stessa dimensione */
+    color: white;
+    /* Colore del simbolo */
 }
+
 
 
 @keyframes rainbow {
