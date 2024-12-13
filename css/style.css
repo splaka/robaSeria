@@ -155,6 +155,50 @@ html {
     left: 0;
 }
 
+/* Stile del pulsante accordion */
+.accordion {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    font-family: "Tiny5", sans-serif;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Stile quando l'accordion è attivo o al passaggio del mouse */
+.active,
+.accordion:hover {
+    background-color: #333;
+}
+
+/* Stile del pannello nascosto e visibile */
+.panel {
+    padding: 0 18px;
+    background-color: black;
+    max-height: 0;
+    /* Altezza iniziale chiusa */
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /* Transizione fluida */
+}
+
+.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
 
 
 @keyframes rainbow {
