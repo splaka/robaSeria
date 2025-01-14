@@ -132,14 +132,18 @@ html {
 
 /* Close Button */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
     font-size: 24px;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
+    padding-inline: 20px;
+    padding-top: 10px;
+}
+
+.close-btn-cont {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 /* Menu Button */
@@ -154,6 +158,11 @@ html {
     top: 15px;
     left: 15px;
     z-index: 1100;
+}
+
+.offcanvas li:hover {
+    background-color: #636363;
+    color: white;
 }
 
 /* Content Area */
