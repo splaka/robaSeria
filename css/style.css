@@ -44,6 +44,8 @@ html {
 }
 
 .mainContenuto {
+    display: flex;
+    flex-direction: column;
     margin: 5%;
 }
 
@@ -86,6 +88,7 @@ html {
     /* Imposta l'altezza dell'immagine con clamp */
     border-style: double;
     border-color: white;
+    object-fit: cover;
 }
 
 .mainContenuto .imgWrap {
@@ -232,8 +235,6 @@ html {
     /* Colore del simbolo */
 }
 
-
-
 @keyframes rainbow {
     0% {
         color: white;
@@ -251,4 +252,24 @@ html {
         color: white;
     }
 
+}
+
+@media (max-width: 600px) {
+    .panel .contentWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .panel .mainContenuto .imgWrap {
+        padding-right: 0px;
+        margin-bottom: 5px;
+    }
+
+    .panel .mainContenuto img {
+        height: clamp(10px, 30vh, 500px);
+        border-style: double;
+        border-color: white;
+        max-width: 100%;
+        object-fit: cover;
+    }
 }
