@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /soggetti.html
+Disallow: /spot.html
+
