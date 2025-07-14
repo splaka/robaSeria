@@ -17,7 +17,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Close menu and show the toggle button
 closeButton.addEventListener('click', () => {
     menu.classList.remove('show');
     toggleButton.style.display = 'block'; // Show the button
