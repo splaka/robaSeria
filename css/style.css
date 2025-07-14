@@ -151,6 +151,7 @@ html {
 
 /* Menu Button */
 .menu-btn {
+    visibility: hidden;
     font-size: 24px;
     padding: 10px 15px;
     cursor: pointer;
@@ -161,6 +162,14 @@ html {
     top: 15px;
     left: 15px;
     z-index: 1100;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.menu-btn.visible {
+    visibility: visible;
+    display: block;
+    opacity: 1;
 }
 
 .offcanvas li:hover {

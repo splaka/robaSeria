@@ -9,6 +9,14 @@ toggleButton.addEventListener('click', () => {
     toggleButton.style.display = 'none'; // Hide the button
 });
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 5) {
+        toggleButton.classList.add('visible');
+    } else if (!menu.classList.contains('show')) {
+        toggleButton.classList.remove('visible');
+    }
+});
+
 // Close menu and show the toggle button
 closeButton.addEventListener('click', () => {
     menu.classList.remove('show');
