@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="tiny5-regular">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sei di Br Se - SoulSilver</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="indexHeader">
+        <h1>SoulSilver</h1>
+    </header>
+    <div id="offcanvas-menu" class="offcanvas">
+        <div class="close-btn-cont">
+            <button class="close-btn">&times;</button>
+        </div>
+
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="spot.html">
+                    <li>Spot</li>
+                </a>
+                <a href="soggetti.html">
+                    <li>Soggetti</li>
+                </a>
+                <a href="ss.html">
+                    <li>SoulSilver</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+    <button id="menu-toggle" class="menu-btn">☰</button>
+
+    <div style='width:640px;height:480px;max-width:100%;margin-inline: auto;'>
+        <div id='game'></div>
+    </div>
+</body>
+
+</html>
+
+<script type='text/javascript'>
+    EJS_player = '#game';
+
+    // Can also be desmume, desmume2015 or melonds
+    EJS_core = 'nds';
+
+    // URL to BIOS file
+    EJS_biosUrl = 'roms/ndsbios/biosnds9.rom';
+
+    // URL to Game rom
+    EJS_gameUrl = 'roms/SoulSilver.zip';
+
+    // Path to the data directory
+    EJS_pathtodata = 'data/';
+</script>
+<script src='data/loader.js'></script>
+<script src="script/script.js"></script>
